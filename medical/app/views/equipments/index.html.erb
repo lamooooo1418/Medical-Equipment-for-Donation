@@ -1,14 +1,14 @@
 <h1 class="mt-4 mb-4 text-center">All the Equipment</h1>
 <div class="col-md-12 text-center">
-    <%= link_to "Add an Equipment", new_equipment_path, { :class => "btn btn-danger rounded-pill" } %>
+  
 </div>
 <table class="table table-striped table-dark table-borderless table-hover text-center">
   <thead class="thead-dark">
   <tr>
     <th>Name:</th>
-    <th>Description:  </th>
-    <th> TimeOfUse:  </th>
-    <th> Phone:     </th>
+    <th>Time_of_Use:</th>
+    <th>Albums</th>
+    <th>Hometown</th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
@@ -18,14 +18,13 @@
       <tr>
         <td><%= link_to equipment.name, equipment_path(equipment) %></td>
        
-        <td><%= equipment.name %></td>
-        <td><%= equipment.description %></td>
         <td><%= equipment.time_of_use %></td>
         <td><%= equipment.phone %></td>
-  
+        <td><a class="btn btn-danger rounded-pill" href="<%= edit_equipment_path(equipment) %>" >
+           <em class="">Edit Artist</em>
           </a>
         </td>
-        
+         <td><a class="btn btn-danger rounded-pill" data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>" rel="nofollow"><i class="large material-icons">Delete Artist</i>
          </a>
         </td>
       </tr>
