@@ -20,13 +20,12 @@
        
         <td><%= equipment.name %></td>
         <td><%= equipment.description %></td>
-        <td><%=  equipment.time_of_use %></td>
-        <td><%=  equipment.phone %></td>
-        <td><a class="btn btn-danger rounded-pill" href="<%= edit_equipment_path(equipment) %>" >
-        <em class="">Edit equipment</em>
+        <td><%= equipment.time_of_use %></td>
+        <td><%= equipment.phone %></td>
+  
           </a>
         </td>
-         <td><a class="btn btn-danger rounded-pill" data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>" rel="nofollow"><i class="large material-icons">Delete equipment</i>
+        
          </a>
         </td>
       </tr>
