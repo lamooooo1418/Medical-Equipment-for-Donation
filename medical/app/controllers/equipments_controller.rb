@@ -1,20 +1,28 @@
 class EquipmentsController < ApplicationController
+    
     before_action :authenticate_user!, only: [:new]
     def index
         @equipments = Equipment.all  
     end 
        
     def show
-        @equipment = Equipment.find(params[:id])
+        if @equipment.user != current_user
+            flash[:notice]= 'Not alowed!'
+            redirect_to equipments_path
+        end
+        #@equipment = Equipment.find(params[:id])
     end
        
     def new
-        equipment= Equipment.new
+        @equipment= Equipment.new
     end
         
     def create
-         Equipment.create(equipment_params)
-         redirect_to equipments_path
+         @equipment =Equipment.create(equipment_params)
+         #@equipment.user = current_user
+         #if @equipment.save
+      #   @equipment.user = current_user
+         redirect_to user_session_path
     end
 
     def edit
@@ -36,4 +44,7 @@ class EquipmentsController < ApplicationController
     def equipment_params
     params.require(:equipment).permit(:name, :description, :time_of_use, :phone)
     end
+
+
+    
 end

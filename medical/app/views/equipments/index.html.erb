@@ -1,15 +1,17 @@
-<h1 class="mt-4 mb-4 text-center">All the Equipment</h1>
+<h1 class="mt-4 mb-4 text-center"> All the Equipment</h1>
 <div class="col-md-12 text-center">
-<%= link_to "Add an Equipment1", new_equipment_path, { :class => "btn btn-danger rounded-pill" } %>   
+<%= link_to "Add an Equipment1", new_equipment_path, { :class => "btn btn-danger rounded-pill" } %> 
+<%= link_to "Sign Up", new_user_registration_path , { :class => "btn btn-danger rounded-pill" } %>   
+<%= link_to "Sign in ", new_equipment_path, { :class => "btn btn-danger rounded-pill" } %>     
 </div>
 <table class="table table-striped table-dark table-borderless table-hover text-center">
   <thead class="thead-dark">
   <tr>
     <th>Name:</th>
-    <th>Time_of_Use:</th>
-    <th>Albums</th>
-    <th>Hometown</th>
-    <th>Edit</th>
+    <th>    :</th>
+    <th>    :</th>
+    <th>    :</th>
+    <th>Edit:</th>
     <th>Delete</th>
   </tr>
 </thead>
@@ -21,10 +23,10 @@
         <td><%= equipment.time_of_use %></td>
         <td><%= equipment.phone %></td>
         <td><a class="btn btn-danger rounded-pill" href="<%= edit_equipment_path(equipment) %>" >
-           <em class="">Edit Artist</em>
+           <em class="">Edit Hospital</em>
           </a>
         </td>
-         <td><a class="btn btn-danger rounded-pill" data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>" rel="nofollow"><i class="large material-icons">Delete Artist</i>
+         <td><a class="btn btn-danger rounded-pill" data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>" rel="nofollow"><i class="large material-icons">Delete Hospital</i>
          </a>
         </td>
       </tr>

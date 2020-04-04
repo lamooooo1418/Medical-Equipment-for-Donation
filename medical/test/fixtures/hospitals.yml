@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hospital_name: MyString
+  equipment_name: MyString
+  quantitity: MyString
+  phone: MyString
+
+two:
+  hospital_name: MyString
+  equipment_name: MyString
+  quantitity: MyString
+  phone: MyString
