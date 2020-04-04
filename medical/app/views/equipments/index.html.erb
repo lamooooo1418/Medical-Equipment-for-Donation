@@ -8,10 +8,9 @@
   <thead class="thead-dark">
   <tr>
     <th>Name:</th>
-    <th>    :</th>
-    <th>    :</th>
-    <th>    :</th>
-    <th>Edit:</th>
+    <th> Description:</th>
+  
+    <th>Edit</th>
     <th>Delete</th>
   </tr>
 </thead>
@@ -19,14 +18,12 @@
   <% @equipments.each do |equipment| %>
       <tr>
         <td><%= link_to equipment.name, equipment_path(equipment) %></td>
-       
-        <td><%= equipment.time_of_use %></td>
-        <td><%= equipment.phone %></td>
+        <td><%= equipment.description %></td>
         <td><a class="btn btn-danger rounded-pill" href="<%= edit_equipment_path(equipment) %>" >
-           <em class="">Edit Hospital</em>
+           <em class="">Edit Equipment</em>
           </a>
         </td>
-         <td><a class="btn btn-danger rounded-pill" data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>" rel="nofollow"><i class="large material-icons">Delete Hospital</i>
+         <td><a class="btn btn-danger rounded-pill" data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>" rel="nofollow"><i class="large material-icons">Delete Equipment</i>
          </a>
         </td>
       </tr>

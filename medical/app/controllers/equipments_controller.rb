@@ -19,12 +19,12 @@ class EquipmentsController < ApplicationController
         
     def create
          @equipment =Equipment.create(equipment_params)
-         #@equipment.user = current_user
+         @equipment.user = current_user
          #if @equipment.save
       #   @equipment.user = current_user
          redirect_to user_session_path
     end
-
+end
     def edit
          @equipment = Equipment.find(params[:id])
     end
