@@ -1,5 +1,6 @@
 
 Rails.application.routes.draw do
+  devise_for :users
   # get 'equipments', to: 'equipments#index'
   # get 'equipments/:id', to: "equipments#show", as: 'equipment'
   # get 'equipments/destroy'
