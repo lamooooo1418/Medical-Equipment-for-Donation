@@ -1,11 +1,17 @@
 class EquipmentsController < ApplicationController
-    
     before_action :authenticate_user!, only: [:new]
+    before_action :find_equipment, except: [:index, :new, :create]
+    
     def index
-        @equipments = Equipment.all  
+    if user_signed_in?
+        @equipments=current_user.equipments.all
+    
+        else
+        @equipments = Equipment.all
+   
     end 
-       
-    def show
+end 
+    def show    
         if @equipment.user != current_user
             flash[:notice]= 'Not alowed!'
             redirect_to equipments_path
@@ -17,23 +23,28 @@ class EquipmentsController < ApplicationController
         @equipment= Equipment.new
     end
         
-    def create
-         @equipment =Equipment.create(equipment_params)
-         @equipment.user = current_user
-         #if @equipment.save
-      #   @equipment.user = current_user
-         redirect_to user_session_path
+    def create  
+        @equipment =Equipment.create(equipment_params)
+        @equipment.user = current_user
+         #@equipment.user = User.find(equipment_params[:user_id])
+        if @equipment.save
+           redirect_to @equipment
+        else
+           render 'new'
+        end
+         #@equipment.user = current_user
+         
     end
-end
+
     def edit
          @equipment = Equipment.find(params[:id])
     end
                   
-    def update
-        equipment = Equipment.find(params[:id])
-        equipment.update(params.require(:equipment).permit(:name, :description, :time_of_use, :phone))
-        redirect_to equipment
-    end
+  # def update 
+     #   equipment = Equipment.find(params[:id])
+      #  equipment.update(params.require(:equipment).permit(:name, :description, :time_of_use, :phone))
+       # redirect_to equipment
+  # end
         
     def destroy
          @equipment = Equipment.find(params[:id]).delete
@@ -42,9 +53,11 @@ end
 
     private
     def equipment_params
-    params.require(:equipment).permit(:name, :description, :time_of_use, :phone)
+        params.require(:equipment).permit(:name, :description, :time_of_use, :phone)
     end
 
-
+    def find_equipment
+        @equipment = Equipment.find(params[:id])
+    end
     
 end
