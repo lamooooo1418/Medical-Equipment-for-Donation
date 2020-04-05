@@ -19,7 +19,7 @@ class HospitalsController < ApplicationController
 
     private
     def  hospital_params
-    params.require(:hospital).permit(:hospital_name ,:equipment_name,:quantitity,:phone )
+    params.require(:hospital).permit(:hospital_name ,:equipment_name,:quantitity,:phone)
     end
 
 

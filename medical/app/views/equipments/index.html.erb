@@ -1,14 +1,14 @@
 <h1 class="mt-4 mb-4 text-center"> All the Equipment</h1>
 <div class="col-md-12 text-center">
  <%if !user_signed_in? %>      
-<%= link_to "Add an Equipment1", new_equipment_path, { :class => "btn btn-danger rounded-pill" } %> 
-<%= link_to "Sign Up", new_user_registration_path , { :class => "btn btn-danger rounded-pill" } %>   
-<%= link_to "Sign in ",   new_user_session_path , { :class => "btn btn-danger rounded-pill" } %>     
+<%= link_to "Add an Equipment1", new_equipment_path %> 
+<%= link_to "Sign Up", new_user_registration_path  %>   
+<%= link_to "Sign in ",   new_user_session_path %>     
 </div>
 <%end%>
-<table class="table table-striped table-dark table-borderless table-hover text-center">
+<table>
 
-  <thead class="thead-dark">
+  <thead>
     <tr>
       <th>Equipment Name</th>
     </tr>
@@ -19,15 +19,16 @@
         <tr>
           <td><%= link_to equipment.name, equipment_path(equipment) %></td>
           <%if user_signed_in? %>      
-                <td><a class="btn btn-danger rounded-pill" href="<%= edit_equipment_path(equipment) %>" >
+                <td><a href="<%= edit_equipment_path(equipment) %>" >
                       <em class="">Edit Equipment</em>
                     </a>
               </td>
-              <td><a class="btn btn-danger rounded-pill" data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>" rel="nofollow"><i class="large material-icons">Delete Equipment</i>
+              <td><a data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>"rel="nofollow"><i>Delete Equipment</i>
                   </a>
               </td>
         </tr>
         <% end %>
     <% end %>
     </tbody>
+    
 </table>
