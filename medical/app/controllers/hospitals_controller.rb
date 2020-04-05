@@ -5,9 +5,9 @@ class HospitalsController < ApplicationController
 
     def new
         equipment=  Hospital.new
-   end
+    end
        
-   def create
+    def create
        Hospital.create( hospital_params)
          redirect_to  hospitals_path
     end
@@ -15,14 +15,12 @@ class HospitalsController < ApplicationController
     def destroy
         @hospital =Hospital.find(params[:id]).delete
         redirect_to hospitals_path 
-  end
+    end
 
     private
     def  hospital_params
-    params.require(:hospital).permit(:hospital_name ,:equipment_name,:quantitity,:phone)
+        params.require(:hospital).permit(:hospital_name ,:equipment_name,:quantitity,:phone)
     end
-
-
 end
 
 

@@ -1,20 +1,20 @@
 <h1>New </h1>
 <%= form_for :hospital do |f| %>
-    <div class="input-field col s6">
+    <div>
     <%= f.label :hospital_name, 'hospital_name'%>
     <%= f.text_field :hospital_name%>
     </div>
-    <div class="input-field col s6">
+    <div>
     <%= f.label :equipment_name, 'equipment_name'%>
     <%= f.text_field :equipment_name %>
     </div>
-    <div class="input-field col s6">
+    <div>
     <%= f.label :quantitity, 'quantitity' %>
     <%= f.text_field :quantitity %>
     </div>
-    <div class="input-field col s6">
+    <div>
     <%= f.label :phone, 'phone' %>
     <%= f.text_field :phone %>
     </div>
-    <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+    <%= f.submit "Submit"%>
 <% end %>
