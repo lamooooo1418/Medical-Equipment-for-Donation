@@ -13,7 +13,7 @@ Rails.application.routes.draw do
  
   #get 'hospitals/create'
   #get 'hospitals/new' 
-  #post 'hospitals/new', to: 'hospitals#create'
+  post 'hospitals/new', to: 'hospitals#create'
   
   #root 'equipments#index'
   root 'pages#home'
