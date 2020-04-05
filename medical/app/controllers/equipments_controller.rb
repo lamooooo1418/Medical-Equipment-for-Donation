@@ -37,18 +37,20 @@ end
     end
 
     def edit
+        
          @equipment = Equipment.find(params[:id])
     end
                   
    def update 
        equipment = Equipment.find(params[:id])
-        equipment.update(params.require(:equipment).permit(:name, :description, :time_of_use, :phone))
+       equipment.update(params.require(:equipment).permit(:name, :description, :time_of_use, :phone))
        redirect_to equipment
+    
   end
         
     def destroy
          @equipment = Equipment.find(params[:id]).delete
-         redirect_to root_path 
+         redirect_to equipments_path 
     end
 
     private

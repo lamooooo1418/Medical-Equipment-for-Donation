@@ -9,4 +9,5 @@
 rails db:create db:migrate
 rails g model Hospital hospital_name equipment_name quantitity phone 
 rails  db:migrate
-rails g controller Hospitals
+rails g controller 
+rails g controller Pages home  

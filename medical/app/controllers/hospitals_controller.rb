@@ -1,11 +1,15 @@
 class HospitalsController < ApplicationController
-
     def index
-        @hospitals =  Hospital.all  
+        if user_signed_in?
+            @Hospitals=current_user.hospitals.all
+             else
+            @hospitals = Hospital.all
+       
+        end 
     end 
        
     def new
-        equipment=  Hospital.new
+        hospitals=  Hospital.new
     end
         
     def create
