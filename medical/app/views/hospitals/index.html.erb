@@ -13,16 +13,15 @@
   </thead> 
   <tbody>
     <% @hospitals.each do |hospital| %>
-    
-            <tr>
+      <tr>
             <td><%= hospital.hospital_name%></td>
             <td><%= hospital.equipment_name %></td>
             <td><%= hospital.quantitity%></td>
             <td><%= hospital.phone %></td>
             <td><a data-confirm="Are you sure you want to delete <%= hospital.hospital_name %>?" data-method="delete" href="/hospitals/<%= hospital.id %>" rel="nofollow"><i>Delete Hospital</i>
-        </td>
-        </tr>
-        <% end %>
+            </td>
+      </tr>
+    <% end %>
  </tbody>
 </table>
 

@@ -1,40 +1,22 @@
-<h1 class="mt-4 mb-4 text-center"> All the Equipment</h1>
-<div class="col-md-12 text-center">
- <%if !user_signed_in? %>  
- <%= link_to 'Home', root_path %>
-<%= link_to 'Equipment', equipments_path %>
-<%= link_to 'Hospitals', hospitals_path %>    
-<%= link_to "Add an Equipment1", new_equipment_path %> 
-<%= link_to "Sign Up", new_user_registration_path  %>   
-<%= link_to "Sign in ",   new_user_session_path %>  
-
-<%else%>
-<%= link_to 'Home', root_path %>
-<%= link_to 'Equipment', equipments_path %>
-<%= link_to 'Hospitals', hospitals_path %>
+<h1> All the Equipment</h1>
+<div>
 <%= link_to "Add Equipment", new_equipment_path %> 
-</div>
-<%end%>
 <table>
-
   <thead>
     <tr>
-    <th>Equipment Name</th>  
-    </tr>
- 
+      <th>Equipment Name</th>  
+      </tr>
+
   </thead>
-  
-  
  <tbody>
-  
     <% @equipments.each do |equipment| %>
         <tr>
           <td><%= link_to equipment.name, equipment_path(equipment) %></td>
           <%if user_signed_in? %>  
               
               <td><a href="<%= edit_equipment_path(equipment) %>" >
-                <em class="">Edit Equipment</em>
-                    </a>
+                 <em class="">Edit Equipment</em>
+                 </a>
               </td>
               <td><a data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>"rel="nofollow"><i>Delete Equipment</i>
                   </a>
@@ -42,6 +24,5 @@
         </tr>
         <% end %>
     <% end %>
-    </tbody>
-    
+  </tbody>
 </table>
