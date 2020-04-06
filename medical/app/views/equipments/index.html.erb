@@ -1,20 +1,22 @@
-<h1> All the Equipment</h1>
-<%= link_to "Add Equipment", new_equipment_path %> 
+<h4> List Of Devices</h4>
+<h6><%= link_to "Add Device", new_equipment_path %></h6> 
 <% @equipments.each do |equipment| %>
+<div class="centered">   
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Equipment Name</h5>
+      <h6 class="card-title">Device Name</h6>
         <p class="card-text" ><%= link_to equipment.name, equipment_path(equipment) %></p>
         <%if user_signed_in? %>  
             <p><a href="<%= edit_equipment_path(equipment) %>" >
-              <em class="">Edit Equipment</em>
+              <em class="">Edit Device</em>
                </a>
             </p>
-            <p><a data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>"rel="nofollow"><i>Delete Equipment</i>
+            <p><a data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>"rel="nofollow"><i>Delete Device</i>
                </a>
             </p>
         <% end %>
     </div>
+  </div>
   </div>
 <% end %>
 

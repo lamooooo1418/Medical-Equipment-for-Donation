@@ -1,15 +1,17 @@
-<h2> Show Equipment </h2>
-<%= link_to "Add Another Equipment", new_equipment_path %> 
-<%= link_to 'Equipment', equipments_path %>
-<div>
- Name: <%= @equipment.name %>
-</div>
-<div>
-Time_Of_Use: <%= @equipment.time_of_use %>
-</div>
-<div>
-Description : <%= @equipment.description %>
-</div>
-<div>
-Phone : <%= @equipment.phone %>
+<h2> Show Device information </h2>
+<%= link_to " Add", new_equipment_path %> 
+<%= link_to 'Devices List', equipments_path %>
+<div class="card" style="width: 18rem;">
+    <div  class="card-title" >
+    Name: <%= @equipment.name %>
+    </div>
+    <div class="card-text">
+    Time_Of_Use: <%= @equipment.time_of_use %>
+    </div>
+    <div class="card-text">
+    Description : <%= @equipment.description %>
+    </div>
+    <div class="card-text">
+    Phone : <%= @equipment.phone %>
+    </div>
 </div>

@@ -1,19 +1,23 @@
- <h1> Hospital Requestes</h1>
- <%= link_to "Add an hospital", new_hospital_path %>  
- <% @hospitals.each do |hospital| %>
+
+<h4>Donate to Hospitals and Healthcare  </h4>
+<h6><%= link_to "Add an hospital", new_hospital_path %>  </h6>
+
+<% @hospitals.each do |hospital| %>
+
+   <div class="centered">   
    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= hospital.hospital_name%></h5>
-        <h6 class="card-title"><%= hospital.equipment_name%></h6>
-          <p class="card-text" ><%= hospital.quantitity%> </p>
-          <p class="card-text" ><%= hospital.phone %></p>
-          <p><a data-confirm="Are you sure you want to delete <%= hospital.hospital_name %>?" data-method="delete" href="/hospitals/<%= hospital.id %>" rel="nofollow"><i>Delete Hospital</i>
-            </a>
-          </p>
-      </div>
-  </div>
- <%end%>
+        <h5>Hospital Name</h5><h5 class="card-title"><%= hospital.hospital_name%></h5>
+        <h5>Device Name</h5><h6 class="card-title"><%= hospital.equipment_name%></h6>
+        <h5>Quantitity</h5> <p class="card-text" ><%= hospital.quantitity%> </p>
+        <h5>Phone</h5><p class="card-text" ><%= hospital.phone %></p>
+        <p><a  data-confirm="Are you sure you want to delete <%= hospital.hospital_name %>?" data-method="delete" href="/hospitals/<%= hospital.id %>" rel="nofollow"><i> <span class="iconic" data-glyph="trash" title="trash" aria-hidden="true"> Delete  </span></i>
+           </a>
+         </p>
+     </div>
+    </div>
+          
+        
 
-
+<%end%>
 
 
