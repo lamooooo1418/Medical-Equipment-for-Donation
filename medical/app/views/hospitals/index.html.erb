@@ -1,29 +1,19 @@
-<h1> All the hospital:</h1>
-<div>
-<%= link_to "Add an hospital", new_hospital_path %>  
-</div>
-<table>
-  <thead>
-    <tr>
-        <th>Hospital Name:</th>
-        <th>Equipment Name:</th>
-        <th>quantitity:</th>
-        <th>phone:</th>
-    </tr>
-  </thead> 
-  <tbody>
-    <% @hospitals.each do |hospital| %>
-      <tr>
-            <td><%= hospital.hospital_name%></td>
-            <td><%= hospital.equipment_name %></td>
-            <td><%= hospital.quantitity%></td>
-            <td><%= hospital.phone %></td>
-            <td><a data-confirm="Are you sure you want to delete <%= hospital.hospital_name %>?" data-method="delete" href="/hospitals/<%= hospital.id %>" rel="nofollow"><i>Delete Hospital</i>
-            </td>
-      </tr>
-    <% end %>
- </tbody>
-</table>
+ <h1> Hospital Requestes</h1>
+ <%= link_to "Add an hospital", new_hospital_path %>  
+ <% @hospitals.each do |hospital| %>
+   <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= hospital.hospital_name%></h5>
+        <h6 class="card-title"><%= hospital.equipment_name%></h6>
+          <p class="card-text" ><%= hospital.quantitity%> </p>
+          <p class="card-text" ><%= hospital.phone %></p>
+          <p><a data-confirm="Are you sure you want to delete <%= hospital.hospital_name %>?" data-method="delete" href="/hospitals/<%= hospital.id %>" rel="nofollow"><i>Delete Hospital</i>
+            </a>
+          </p>
+      </div>
+  </div>
+ <%end%>
+
 
 
 
