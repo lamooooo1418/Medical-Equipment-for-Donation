@@ -10,22 +10,34 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= link_to 'Home', root_path %></li>
-    <%= link_to 'Equipment', equipments_path %>
-    <%= link_to 'Hospitals', hospitals_path %>
+    
+    <nav aria-label="breadcrumb">
+     <ol class="breadcrumb">
+     
+      <li class="breadcrumb-item active" aria-current="page">
+       <%= link_to 'Home', root_path %></li>
+     <li class="breadcrumb-item active" aria-current="page">
+    <%= link_to 'Equipment', equipments_path %></li>
+     <li class="breadcrumb-item active" aria-current="page">
+    <%= link_to 'Hospitals', hospitals_path %></li>
+
+
+    </ol>
     <% if user_signed_in? %>
-      <p>
-        Welcome <%= current_user.email %>
-      </p>
+     
+      </nav>
     <% end %>
     <nav >
     <% if user_signed_in? %>  
+    <button type="button" class="btn btn-info">
       <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      </button>
     <%else%>
       <%= link_to "Sign Up", new_user_registration_path  %>   
       <%= link_to "Sign in ",   new_user_session_path %>
     <% end %>
     </nav>
+    <%= render 'layouts/nav' %>
     <%= yield %>
   </body>
 </html>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post 'equipments/new', to: 'equipments#create'
   post 'hospitals/new', to: 'hospitals#create'
   root 'pages#home'
- 
+  get "bootstrap", to: "equipment#bootstrap"
 end
   
 

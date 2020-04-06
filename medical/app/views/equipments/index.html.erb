@@ -1,28 +1,27 @@
 <h1> All the Equipment</h1>
-<div>
 <%= link_to "Add Equipment", new_equipment_path %> 
-<table>
-  <thead>
-    <tr>
-      <th>Equipment Name</th>  
-      </tr>
+ <% @equipments.each do |equipment| %>
 
-  </thead>
- <tbody>
-    <% @equipments.each do |equipment| %>
-        <tr>
-          <td><%= link_to equipment.name, equipment_path(equipment) %></td>
-          <%if user_signed_in? %>  
+
+<div class="card" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-title">Equipment Name</h5>
+    
+    <p class="card-text" ><%= link_to equipment.name, equipment_path(equipment) %></p>
+           <%if user_signed_in? %>  
               
-              <td><a href="<%= edit_equipment_path(equipment) %>" >
+            <p><a href="<%= edit_equipment_path(equipment) %>" >
                  <em class="">Edit Equipment</em>
                  </a>
-              </td>
-              <td><a data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>"rel="nofollow"><i>Delete Equipment</i>
+              </p>
+              <p><a data-confirm="Are you sure you want to delete <%= equipment.name %>?" data-method="delete" href="/equipments/<%= equipment.id %>"rel="nofollow"><i>Delete Equipment</i>
                   </a>
-              </td>
+              </p>
         </tr>
         <% end %>
-    <% end %>
-  </tbody>
-</table>
+           
+
+  </div>
+   <% end %>
+
