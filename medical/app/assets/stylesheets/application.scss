@@ -17,25 +17,65 @@
 @import "bootstrap";
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
+    background: linear-gradient(-45deg, #ffffff, #4a4748, #23a6d5, #0ddfae);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
+
 h4{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;   
-    padding: 10px;
-    margin: 6px;
-    background-color: rgb(199, 195, 195);
+   font-family: "Optima", sans-serif;
+    padding: 15px;
+    border: white 1px solid;
 } 
-  
-h6{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;   
+
+h5{
+  background-color:rgb(169, 201, 233);
 }
- 
+
 .centered {
+   
+        text-align: center;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 40%;
+        width: 30%;
         padding: 5px;          
-}   
+}  
+
+.centered-new{
+  text-align: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  padding: 5px;    
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

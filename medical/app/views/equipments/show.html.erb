@@ -1,17 +1,17 @@
-<h2> Show Device information </h2>
-<%= link_to " Add", new_equipment_path %> 
-<%= link_to 'Devices List', equipments_path %>
+<h4> Show Device information </h4>
+ <div class="centered"> 
 <div class="card" style="width: 18rem;">
-    <div  class="card-title" >
-    Name: <%= @equipment.name %>
+ <div  class="card-title" >
+   <h5> Name</h5> <%= @equipment.name %>
     </div>
     <div class="card-text">
-    Time_Of_Use: <%= @equipment.time_of_use %>
+     <h5>Time Of Use</h5><%= @equipment.time_of_use %>
     </div>
     <div class="card-text">
-    Description : <%= @equipment.description %>
+    <h5> Description</h5><%= @equipment.description %>
     </div>
     <div class="card-text">
-    Phone : <%= @equipment.phone %>
+     <h5>Phone</h5><%= @equipment.phone %>
     </div>
+</div>
 </div>

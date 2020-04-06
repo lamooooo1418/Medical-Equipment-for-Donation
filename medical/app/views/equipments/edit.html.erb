@@ -1,27 +1,31 @@
-<h1>Edit <%= @equipment.name %></h1>
-<%= link_to 'Equipment', equipments_path %>
+<h4>Edit <%= @equipment.name %></h4>
 
 <%= form_for @equipment do |f| %>
+<div class="centered-new">   
+   <div class="card" style="width: 18rem;">
+    
+        <div>
+        <%= f.label :name, 'Name'%>
+        <%= f.text_field :name%>
+        </div>
 
-    <div>
-    <%= f.label :name, 'name'%>
-    <%= f.text_field :name%>
+        <div>
+        <%= f.label :description, 'Description'%>
+        <%= f.text_field :description %>
+        </div>
+
+        <div>
+        <%= f.label :time_of_use, 'Time Of Use' %>
+        <%= f.text_field :time_of_use %>
+        </div>
+
+        <div>
+        <%= f.label :phone, 'Phone' %>
+        <%= f.text_field :phone %>
+        </div>
+        <%= f.submit "Submit"%>
+
     </div>
-
-    <div>
-    <%= f.label :description, 'description'%>
-    <%= f.text_field :description %>
     </div>
-
-    <div>
-    <%= f.label :time_of_use, 'time_of_use' %>
-    <%= f.text_field :time_of_use %>
-    </div>
-
-    <div>
-    <%= f.label :phone, 'phone' %>
-    <%= f.text_field :phone %>
-    </div>
-
-    <%= f.submit "Submit"%>
+    
 <% end %>

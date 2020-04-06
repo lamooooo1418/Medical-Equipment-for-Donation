@@ -6,12 +6,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> 
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" >Medical Equipments Donation</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,7 +23,7 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" > <%= link_to 'Donation', equipments_path %></a>
-                    <a class="dropdown-item" > <%= link_to 'Support Hospitals and Healthcare', hospitals_path %></a>
+                    <a class="dropdown-item" > <%= link_to 'Support Hospitals', hospitals_path %></a>
                   </div>
                </li>
             </ul>
@@ -41,6 +36,12 @@
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
+         <button type="button" class="btn btn-outline-primary"  >
+          <%= link_to "Add Device", new_equipment_path %>
+         </button> 
+        <button type="button" class="btn btn-outline-primary"  >
+          <%= link_to "Ask For Device", new_hospital_path %> 
+        </button> 
           <% if user_signed_in? %>  
             <button type="button" class="btn btn-outline-primary"  >
               <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
@@ -55,7 +56,10 @@
           <%end%>
         </ol>
       </nav>
-      
+  </head>
+  <body>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p> 
     <%= yield %>
   </body>
 </html>

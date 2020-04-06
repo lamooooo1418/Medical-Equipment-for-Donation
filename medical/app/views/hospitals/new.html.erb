@@ -1,20 +1,24 @@
-<h1>New </h1>
+<h4>New Requests </h4>
 <%= form_for :hospital do |f| %>
+ <div class="centered-new">   
+   <div class="card" style="width: 18rem;">
     <div>
-    <%= f.label :hospital_name, 'hospital_name'%>
+    <%= f.label :hospital_name, 'Hospital Name'%>
     <%= f.text_field :hospital_name%>
     </div>
     <div>
-    <%= f.label :equipment_name, 'equipment_name'%>
+    <%= f.label :equipment_name, 'Device Name'%>
     <%= f.text_field :equipment_name %>
     </div>
     <div>
-    <%= f.label :quantitity, 'quantitity' %>
+    <%= f.label :quantitity, 'Quantitity' %>
     <%= f.text_field :quantitity %>
     </div>
     <div>
-    <%= f.label :phone, 'phone' %>
+    <%= f.label :phone, 'Phone' %>
     <%= f.text_field :phone %>
     </div>
     <%= f.submit "Submit"%>
+    </div>
+     </div>
 <% end %>
