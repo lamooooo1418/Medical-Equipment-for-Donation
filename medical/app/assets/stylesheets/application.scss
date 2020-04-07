@@ -18,9 +18,11 @@
 
 body {
     font-family: "Times New Roman", Times, serif;
-    background: linear-gradient(-45deg, #ffffff, #4a4748, #23a6d5, #0ddfae);
+    color: rgb(48, 44, 44);
+    background: linear-gradient(-45deg, #ffffff, #08366d, #23a6d5, #0ddfae);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+  
 }
 
 h4{
@@ -33,6 +35,23 @@ h4{
 h5{
   background-color:rgb(169, 201, 233);
 }
+
+h2{
+ position: center;
+  text-align: center;
+ font-family: "Optima", sans-serif;
+ width: 40%px;
+  padding: 15px;
+  border: white 1px solid;
+  position:absolute;
+  top: 60%;
+  left: 25%;
+  margin-top: -50px;
+  margin-left: -50px;
+
+
+} 
+
 
 .centered {
    
@@ -61,9 +80,7 @@ h5{
 	50% {
 		background-position: 100% 50%;
 	}
-	100% {
-		background-position: 0% 50%;
-	}
+
 }
 
 
