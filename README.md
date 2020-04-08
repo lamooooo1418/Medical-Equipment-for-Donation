@@ -36,7 +36,6 @@ Given what happened recently due to Covid 19 there was a significant shortage of
 ![Wireframe](/Media/5.png)
 ![Wireframe](/Media/4.png)
 ![Wireframe](/Media/1.png)
-![Wireframe](/Media/2.png)
 ![Wireframe](/Media/3.png)
 
 
