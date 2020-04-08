@@ -5,15 +5,17 @@
    <div class="centered">   
       <div class="card" style="width: 18rem;">
             <h5>Hospital Name</h5><p class="card-title"><%= hospital.hospital_name%></p>
-            <h5>Device Name</h5><h6 class="card-title"><%= hospital.equipment_name%></h6>
+            <h5>Equipment Name</h5><h6 class="card-title"><%= hospital.equipment_name%></h6>
             <h5>Quantitity</h5> <p class="card-text" ><%= hospital.quantitity%> </p>
             <h5>Phone</h5><p class="card-text" ><%= hospital.phone %></p>
-            <p><a  data-confirm="Are you sure you want to delete <%= hospital.hospital_name %>?" data-method="delete" href="/hospitals/<%= hospital.id %>" rel="nofollow"><i> <span class="iconic" data-glyph="trash" title="trash" aria-hidden="true"> Delete  </span></i>
-              </a>
-            </p>
+            <%if user_signed_in? %>  
+              <p><a  data-confirm="Are you sure you want to delete <%= hospital.hospital_name %>?"
+                     data-method="delete" href="/hospitals/<%= hospital.id %>" rel="nofollow"><i>  Delete </i>
+                </a>
+              </p>
+          <%end%>
       </div>
     </div>
 </div>   
 <%end%>
-
 
