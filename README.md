@@ -4,6 +4,7 @@
 Given what happened recently due to Covid 19 there was a significant shortage of medical equipment, which affected the hospitals around the world. Thus the project objective is to create Full-Stack Ruby on Rails web application that allow user to donate medical equipment and hospital requests.
 
 ####  Deployed Website Link
+https://thawing-ravine-95336.herokuapp.com
 
 
 
