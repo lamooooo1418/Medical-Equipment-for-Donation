@@ -11,12 +11,9 @@ class EquipmentsController < ApplicationController
         end 
     end 
 
-    def show    
-        if @equipment.user != current_user
-            flash[:notice]= 'Not alowed!'
-            redirect_to equipments_path
-        end
-    end
+    def show
+        @equipment = Equipment.find(params[:id])
+      end
        
     def new
         @equipment= Equipment.new
