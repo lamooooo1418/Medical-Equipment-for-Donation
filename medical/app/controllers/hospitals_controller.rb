@@ -1,6 +1,6 @@
 class HospitalsController < ApplicationController
     before_action :authenticate_user!, only: [:new]
-    before_action :find_equipment, except: [:index, :new, :create]
+    before_action :find_hospital, except: [:index, :new, :create]
     def index
        if user_signed_in?
             
@@ -29,10 +29,21 @@ class HospitalsController < ApplicationController
         @hospital =Hospital.find(params[:id]).delete
         redirect_to hospitals_path 
     end
+  
 
     private
     def  hospital_params
         params.require(:hospital).permit(:hospital_name ,:equipment_name,:quantitity,:phone)
     end
+
+    def find_hospital
+        @hospital = Hospital.find(params[:id])
+    end
+    
 end
+
+
+
+
+
 
