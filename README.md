@@ -33,11 +33,11 @@ It is a Full-Stack Ruby on rails web application that allow user to Donate Medic
 
 
 #### The Wireframe 
-![Wireframe](5.png)
-![Wireframe](4.png)
-![Wireframe](1.png)
-![Wireframe](2.png)
-![Wireframe](3.png)
+![Wireframe](/Media/5.png)
+![Wireframe](/Media/4.png)
+![Wireframe](/Media/1.png)
+![Wireframe](/Media/2.png)
+![Wireframe](/Media/3.png)
 
 
 
@@ -45,7 +45,7 @@ It is a Full-Stack Ruby on rails web application that allow user to Donate Medic
 #### ER Diagram 
 
 
-![Wireframe](6.png)
+![Wireframe](/Media/6.png)
 
 
 #### Future Work 
