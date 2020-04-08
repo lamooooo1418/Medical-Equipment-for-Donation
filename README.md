@@ -1,7 +1,7 @@
 # Medical-Equipment-for-Donation
 
 ### Descriprtion 
-It is a Full-Stack Ruby on rails web application that allow user to Donate Medical Equipment and Hospital Requests.
+Given what happened recently due to Covid 19 there was a significant shortage of medical equipment, which affected the hospitals around the world. Thus the project objective is to create Full-Stack Ruby on Rails web application that allow user to donate medical equipment and hospital requests.
 
 ####  Deployed Website Link
 
@@ -9,8 +9,8 @@ It is a Full-Stack Ruby on rails web application that allow user to Donate Medic
 
 
 ### User Stories 
-- As a User I can Add New Eqipment .
-- As a User I can Delete any of my Equipments. 
+- As a User I can Add New Equipment .
+- As a User I can Delete any of my Equipment. 
 - As a User I can Edit the information of my Equipment .
 - As a User I can See the information of One of my Equipment .
 - As a User I can See the list of the Equipment System .
