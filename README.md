@@ -9,12 +9,14 @@ It is a Full-Stack Ruby on rails web application that allow user to Donate Medic
 
 
 ### User Stories 
-- As a User I can Add New Eqipment and Hospital Requests To donate .
+- As a User I can Add New Eqipment .
 - As a User I can Delete any of my Equipments. 
 - As a User I can Edit the information of my Equipment .
 - As a User I can See the information of One of my Equipment .
 - As a User I can See the list of the Equipment System .
 - As a User I can see the list of Hospitl Requests.
+- As a User I can Add New Hospital Requests To donate .
+- As a User I can Delete any of my Hospital Requests . 
 
 
 ### Tools 
@@ -49,7 +51,6 @@ It is a Full-Stack Ruby on rails web application that allow user to Donate Medic
 #### Future Work 
 
 - Search Function .
-- Hospital Authencation .
 - Full CRUD for Hospital .
 - Adding image to the Equipment .
   
